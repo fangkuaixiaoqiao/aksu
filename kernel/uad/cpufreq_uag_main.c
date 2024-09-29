@@ -26,17 +26,17 @@
 #endif
 
 #if IS_ENABLED(CONFIG_OPLUS_FEATURE_FRAME_BOOST)
-#include "../frame_boost/frame_group.h"
+#include "frame_group.h"
 #endif
 #include <linux/version.h>
-#include "../../power/cpufreq_health/cpufreq_health.h"
+#include "cpufreq_health.h"
 #include <linux/kernel.h>
 #if IS_ENABLED(CONFIG_OPLUS_CPUFREQ_IOWAIT_PROTECT)
-#include "../sched_assist/eas_opt/oplus_iowait.h"
+#include "oplus_iowait.h"
 #endif
 
 #if IS_ENABLED(CONFIG_OPLUS_FEATURE_VT_CAP)
-#include "../sched_assist/eas_opt/oplus_cap.h"
+#include "oplus_cap.h"
 #endif
 
 #ifdef CONFIG_OPLUS_MULTI_LV_TL
