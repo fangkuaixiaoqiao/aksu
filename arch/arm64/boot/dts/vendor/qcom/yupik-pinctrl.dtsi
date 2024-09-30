@@ -8,6 +8,7 @@
 		interrupt-controller;
 		#interrupt-cells = <2>;
 		wakeup-parent = <&pdc>;
+                qcom,tlmm-mpm-wake-control;
 
 //#ifdef OPLUS_FEATURE_CHG_BASIC//BSP.Chg.Basic, 2022/07/28 delete qcom gpio32,33
 	/* yupik_reserved_gpios[] = {32, 33, 48, 49, 50, 51, -1}; */
