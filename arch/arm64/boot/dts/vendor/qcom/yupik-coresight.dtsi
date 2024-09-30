@@ -853,17 +853,17 @@
 				};
 			};
 
-			port@18 {
+			port@1b {
 				reg = <27>;
-				tpda_dlct5_in_tpdm_dlct: endpoint@1b {
+				tpda_dlct5_in_tpdm_dlct: endpoint {
 					remote-endpoint =
 						<&tpdm_dlct_out_tpda_dlct5>;
 				};
 			};
 
-			port@19 {
+			port@1c {
 				reg = <28>;
-				tpda_dlct5_in_tpdm_ipcc: endpoint@1c {
+				tpda_dlct5_in_tpdm_ipcc: endpoint {
 					remote-endpoint =
 						<&tpdm_ipcc_out_tpda_dlct5>;
 				};
