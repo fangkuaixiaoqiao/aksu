@@ -57,8 +57,11 @@
 		nand@79b0000 {
 			status = "ok";
 
+                        #address-cells = <1>;
+			#size-cells = <1>;
+
 			nand@0 {
-                                reg = <0x00>;
+                                reg = <0>;
 				nand-ecc-strength = <4>;
 				nand-ecc-step-size = <512>;
 				nand-bus-width = <8>;
