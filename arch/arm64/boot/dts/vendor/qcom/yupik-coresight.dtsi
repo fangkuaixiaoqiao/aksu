@@ -855,7 +855,7 @@
 
 			port@18 {
 				reg = <27>;
-				tpda_dlct5_in_tpdm_dlct: endpoint {
+				tpda_dlct5_in_tpdm_dlct: endpoint@1b {
 					remote-endpoint =
 						<&tpdm_dlct_out_tpda_dlct5>;
 				};
@@ -863,7 +863,7 @@
 
 			port@19 {
 				reg = <28>;
-				tpda_dlct5_in_tpdm_ipcc: endpoint {
+				tpda_dlct5_in_tpdm_ipcc: endpoint@1c {
 					remote-endpoint =
 						<&tpdm_ipcc_out_tpda_dlct5>;
 				};
