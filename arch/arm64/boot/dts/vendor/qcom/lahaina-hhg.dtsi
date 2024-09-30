@@ -71,7 +71,7 @@
 		compatible = "i2c-gpio";
                 #address-cells = <1>;
                 #size-cells = <0>;
-		reg = <0x0>;
+		reg = <0x00>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&fan>;
 		gpios = <&tlmm 107 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN) /* sda */>,
