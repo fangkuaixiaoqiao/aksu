@@ -3,6 +3,8 @@
 #include <dt-bindings/phy/qcom,usb3-5nm-qmp-uni.h>
 
 &soc {
+	#address-cells = <1>;
+	#size-cells = <1>;
 	usb0: ssusb@a600000 {
 		compatible = "qcom,dwc-usb3-msm";
 		reg = <0xa600000 0x100000>;
