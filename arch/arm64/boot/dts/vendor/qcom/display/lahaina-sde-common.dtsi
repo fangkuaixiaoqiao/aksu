@@ -395,7 +395,7 @@
 		};
 	};
 
-	mdss_dsi_phy1: qcom,mdss_dsi_phy1@ae96900 {
+	mdss_dsi_phy1: qcom,mdss_dsi_phy1@ae96400 {
 		compatible = "qcom,dsi-phy-v4.2";
 		label = "dsi-phy-1";
 		cell-index = <1>;
