@@ -964,7 +964,7 @@ static int __attribute__((__unused__)) init_ddr_type(struct device_info *dev_inf
 }
 #endif
 
-int devinfo_probe(struct platform_device *pdev)
+int __initdata devinfo_probe(struct platform_device *pdev)
 {
 	struct device_info *dev_info;
 
