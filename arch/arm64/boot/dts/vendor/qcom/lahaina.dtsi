@@ -3745,7 +3745,7 @@
 		qcom,count-unit = <0x10000>;
 	};
 
-	cpu0_cpu_l3_lat: qcom,cpu0-cpu-l3-lat {
+	cpu0_cpu_l3_lat: qcom,cpu0-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3755,7 +3755,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU0>;
 	};
 
-	cpu1_cpu_l3_lat: qcom,cpu1-cpu-l3-lat {
+	cpu1_cpu_l3_lat: qcom,cpu1-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3765,7 +3765,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU1>;
 	};
 
-	cpu2_cpu_l3_lat: qcom,cpu2-cpu-l3-lat {
+	cpu2_cpu_l3_lat: qcom,cpu2-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3775,7 +3775,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU2>;
 	};
 
-	cpu3_cpu_l3_lat: qcom,cpu3-cpu-l3-lat {
+	cpu3_cpu_l3_lat: qcom,cpu3-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3785,7 +3785,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU3>;
 	};
 
-	cpu4_cpu_l3_lat: qcom,cpu4-cpu-l3-lat {
+	cpu4_cpu_l3_lat: qcom,cpu4-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3795,7 +3795,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU4>;
 	};
 
-	cpu5_cpu_l3_lat: qcom,cpu5-cpu-l3-lat {
+	cpu5_cpu_l3_lat: qcom,cpu5-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3805,7 +3805,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU5>;
 	};
 
-	cpu6_cpu_l3_lat: qcom,cpu6-cpu-l3-lat {
+	cpu6_cpu_l3_lat: qcom,cpu6-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3815,7 +3815,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU6>;
 	};
 
-	cpu7_cpu_l3_lat: qcom,cpu7-cpu-l3-lat {
+	cpu7_cpu_l3_lat: qcom,cpu7-cpu-l3-lat@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3825,7 +3825,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU7>;
 	};
 
-	cpu7_cpu_l3_latfloor: qcom,cpu7-cpu-l3-latfloor {
+	cpu7_cpu_l3_latfloor: qcom,cpu7-cpu-l3-latfloor@18590100 {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3835,7 +3835,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_SHARED>;
 	};
 
-	snoop_l3_bw: qcom,snoop-l3-bw {
+	snoop_l3_bw: qcom,snoop-l3-bw@18590100 {
 		compatible = "qcom,devfreq-icc-l3bw";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3846,7 +3846,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_SHARED>;
 	};
 
-	snoop_l3_bwmon: qcom,snoop-l3-bwmon@9091000 {
+	snoop_l3_bwmon: qcom,snoop-l3-bwmon@90b9100 {
 		compatible = "qcom,bimc-bwmon4";
 		reg = <0x90b9100 0x300>, <0x90b9000 0x200>;
 		reg-names = "base", "global_base";
@@ -4449,7 +4449,7 @@
 		};
 	};
 
-	pil_modem: qcom,mss@8a800000 {
+	pil_modem: qcom,mss@4080000 {
 		compatible = "qcom,pil-tz-generic";
 		reg = <0x4080000 0x100>;
 
@@ -4547,7 +4547,7 @@
 		mbox-names = "adsp-pil";
 	};
 
-	qcom,turing@0x98900000 {
+	qcom,turing@98900000 {
 		compatible = "qcom,pil-tz-generic";
 		reg = <0x98900000 0x1400000>;
 
@@ -5180,7 +5180,7 @@
 	};
 
 	/* PIL spss node - for loading Secure Processor */
-	qcom,spss@1880000 {
+	qcom,spss@188101c {
 		compatible = "qcom,pil-tz-generic";
 		reg = <0x188101c 0x4>,
 		      <0x1881024 0x4>,
@@ -5660,7 +5660,7 @@
 		};
 	};
 
-	bluetooth: bt_qca6490 {
+	bluetooth: bt_qca6490@b2e5510 {
 		compatible = "qcom,qca6490";
 		reg = <0xb2e5510 0x690>;
 		reg-names = "tcs_cmd";
