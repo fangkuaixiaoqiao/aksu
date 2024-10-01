@@ -578,13 +578,10 @@
 	};
 };
 
-#address-cells = <2>;
-#size-cells = <2>;
-
 &soc {
 	#address-cells = <1>;
 	#size-cells = <1>;
-        ranges = <0 0 0 0xffffffff>;
+        ranges = <0 0xffffffff>;
 	compatible = "simple-bus";
 
 	psci {
