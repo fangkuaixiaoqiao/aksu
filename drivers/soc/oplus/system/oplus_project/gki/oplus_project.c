@@ -407,7 +407,7 @@ static void dump_confidential_status(struct seq_file *s)
     return;
 }
 
-static void update_manifest(struct proc_dir_entry *parent_1, struct proc_dir_entry *parent_2)
+static void __initdata update_manifest(struct proc_dir_entry *parent_1, struct proc_dir_entry *parent_2)
 {
     static const char* manifest_src[2] = {
         "/vendor/odm/etc/vintf/manifest_ssss.xml",
