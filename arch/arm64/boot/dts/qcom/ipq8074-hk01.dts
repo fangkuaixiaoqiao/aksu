@@ -58,7 +58,7 @@
 			status = "ok";
 
                         #address-cells = <1>;
-			#size-cells = <1>;
+			#size-cells = <0>;
 
 			nand@0 {
                                 reg = <0>;
