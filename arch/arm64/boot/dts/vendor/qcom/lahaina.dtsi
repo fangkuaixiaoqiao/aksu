@@ -578,11 +578,14 @@
 	};
 };
 
+#address-cells = <1>;
+#size-cells = <1>;
+
 &soc {
-        ranges = <0 0 0 0xffffffff>;
-	compatible = "simple-bus";
 	#address-cells = <1>;
 	#size-cells = <1>;
+        ranges = <0 0 0 0xffffffff>;
+	compatible = "simple-bus";
 
 	psci {
 		compatible = "arm,psci-1.0";
