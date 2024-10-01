@@ -579,10 +579,10 @@
 };
 
 &soc {
-	#address-cells = <2>;
-	#size-cells = <2>;
-	ranges = <0 0 0 0xffffffff>;
+        ranges = <0 0 0 0xffffffff>;
 	compatible = "simple-bus";
+	#address-cells = <1>;
+	#size-cells = <1>;
 
 	psci {
 		compatible = "arm,psci-1.0";
