@@ -579,8 +579,8 @@
 };
 
 &soc {
-	#address-cells = <1>;
-	#size-cells = <1>;
+	#address-cells = <2>;
+	#size-cells = <2>;
 	ranges = <0 0 0 0xffffffff>;
 	compatible = "simple-bus";
 
@@ -669,7 +669,6 @@
 	memtimer: timer@17c20000 {
 		#address-cells = <1>;
 		#size-cells = <1>;
-		ranges;
 		compatible = "arm,armv7-timer-mem";
 		reg = <0x17c20000 0x1000>;
 		clock-frequency = <19200000>;
@@ -4226,7 +4225,6 @@
 		compatible = "qcom,glink";
 		#address-cells = <1>;
 		#size-cells = <1>;
-		ranges;
 
 		glink_modem: modem {
 			qcom,remote-pid = <1>;
@@ -5713,7 +5711,6 @@
 		#address-cells = <1>;
 		#size-cells = <1>;
 		read-only;
-		ranges;
 
 		gpu_speed_bin: gpu_speed_bin@17b {
 				reg = <0x17b 0x1>;
