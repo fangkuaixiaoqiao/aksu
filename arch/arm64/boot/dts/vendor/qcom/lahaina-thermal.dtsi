@@ -18,7 +18,7 @@
 };
 
 &soc {
-	mx_sdpm@0x00636000 {
+	mx_sdpm@636000 {
 		compatible = "qcom,sdpm";
 		reg = <0x00636000 0x1000>;
 		clock-names = "cam_cc_ipe", "video_cc_mvs0", "gcc_gp1";
@@ -30,7 +30,7 @@
 		csr-id = <1 3 5>;
 	};
 
-	cx_sdpm@0x00634000 {
+	cx_sdpm@634000 {
 		compatible = "qcom,sdpm";
 		reg = <0x00634000 0x1000>;
 		clock-names = "cam_cc_csi0phytiimer", "ufs_phy";
@@ -40,23 +40,24 @@
 		csr-id = <5 7>;
 	};
 
-	mx_pe: mx_rdpm_pe@0x00637000 {
+	mx_pe: mx_rdpm_pe@637000 {
 		compatible = "qcom,policy-engine";
 		#thermal-sensor-cells = <0>;
 		reg = <0x00637000 0x1000>;
 		interrupts = <GIC_SPI 237 IRQ_TYPE_LEVEL_HIGH>;
 	};
 
-	cx_pe: cx_rdpm_pe@0x00635000 {
+	cx_pe: cx_rdpm_pe@635000 {
 		compatible = "qcom,policy-engine";
 		#thermal-sensor-cells = <0>;
 		reg = <0x00635000 0x1000>;
 		interrupts = <GIC_SPI 243 IRQ_TYPE_LEVEL_HIGH>;
 	};
 
-	ddr_cdev: qcom,ddr-cdev {
+	ddr_cdev: qcom,ddr-cdev@638000 {
 		compatible = "qcom,ddr-cooling-device";
 		#cooling-cells = <2>;
+                reg = <0x00638000 0x1000>;
 		qcom,ddr-freq = <0>,
 				<1720000>,
 				<2086000>,
@@ -204,12 +205,12 @@
 		};
 
 		cooling-maps {
-			cpu00_cdev {
+			cpu00_ {
 				trip = <&cpu00_config>;
 				cooling-device = <&cpu0_isolate 1 1>;
 			};
 
-			cpu00_cdev2 {
+			cpu00_2 {
 				trip = <&cpu00_config1>;
 				cooling-device = <&cpu0_hotplug 1 1>;
 			};
@@ -236,12 +237,12 @@
 		};
 
 		cooling-maps {
-			cpu01_cdev {
+			cpu01_ {
 				trip = <&cpu01_config>;
 				cooling-device = <&cpu1_isolate 1 1>;
 			};
 
-			cpu01_cdev2 {
+			cpu01_2 {
 				trip = <&cpu01_config1>;
 				cooling-device = <&cpu1_hotplug 1 1>;
 			};
@@ -268,12 +269,12 @@
 		};
 
 		cooling-maps {
-			cpu02_cdev {
+			cpu02_ {
 				trip = <&cpu02_config>;
 				cooling-device = <&cpu2_isolate 1 1>;
 			};
 
-			cpu02_cdev2 {
+			cpu02_2 {
 				trip = <&cpu02_config1>;
 				cooling-device = <&cpu2_hotplug 1 1>;
 			};
