@@ -964,7 +964,8 @@ static int __attribute__((__unused__)) init_ddr_type(struct device_info *dev_inf
 }
 #endif
 
-int __init __initdata devinfo_probe(struct platform_device *pdev)
+static int __initdata
+devinfo_probe(struct platform_device *pdev)
 {
 	struct device_info *dev_info;
 
@@ -1018,7 +1019,7 @@ static struct of_device_id devinfo_id[] = {
 	{},
 };
 
-static struct platform_driver devinfo_platform_driver = {
+static struct platform_driver __initdata devinfo_platform_driver = {
 	.probe = devinfo_probe,
 	.remove = devinfo_remove,
 	.driver = {
