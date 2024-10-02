@@ -63,6 +63,12 @@ jobs:
         key: build-kernel-mido-kernel
         max-size: 2G
 
+
+    - name: 格式转化
+      run: |
+        cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
+        find ./  -exec dos2unix {} \;
+        
  
     - name: 开始编译内核
       run: |
