@@ -284,7 +284,7 @@
 		};
 	};
 
-	gmu: qcom,gmu@3d6a000 {
+	gmu: qcom,gmu@3d69000 {
 		compatible = "qcom,gpu-gmu";
 
 		reg = <0x3d6a000 0x34000>,

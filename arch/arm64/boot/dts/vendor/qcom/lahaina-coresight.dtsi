@@ -149,6 +149,7 @@
 
 		#address-cells = <1>;
 		#size-cells = <1>;
+		ranges;
 
 		arm,buffer-size = <0x400000>;
 		arm,scatter-gather;

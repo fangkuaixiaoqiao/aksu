@@ -581,6 +581,7 @@
 &soc {
 	#address-cells = <1>;
 	#size-cells = <1>;
+	ranges = <0 0 0 0xffffffff>;
 	compatible = "simple-bus";
 
 	psci {
@@ -668,6 +669,7 @@
 	memtimer: timer@17c20000 {
 		#address-cells = <1>;
 		#size-cells = <1>;
+		ranges;
 		compatible = "arm,armv7-timer-mem";
 		reg = <0x17c20000 0x1000>;
 		clock-frequency = <19200000>;
@@ -2473,7 +2475,7 @@
 		#clock-cells = <1>;
 	};
 
-	cpufreq_hw: qcom,cpufreq-hw@18591000 {
+	cpufreq_hw: qcom,cpufreq-hw {
 		compatible = "qcom,cpufreq-hw-epss";
 		reg = <0x18591000 0x1000>, <0x18592000 0x1000>,
 			<0x18593000 0x1000>;
@@ -3743,7 +3745,7 @@
 		qcom,count-unit = <0x10000>;
 	};
 
-	cpu0_cpu_l3_lat: qcom,cpu0-cpu-l3-lat@18590100 {
+	cpu0_cpu_l3_lat: qcom,cpu0-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3753,7 +3755,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU0>;
 	};
 
-	cpu1_cpu_l3_lat: qcom,cpu1-cpu-l3-lat@18590100 {
+	cpu1_cpu_l3_lat: qcom,cpu1-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3763,7 +3765,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU1>;
 	};
 
-	cpu2_cpu_l3_lat: qcom,cpu2-cpu-l3-lat@18590100 {
+	cpu2_cpu_l3_lat: qcom,cpu2-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3773,7 +3775,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU2>;
 	};
 
-	cpu3_cpu_l3_lat: qcom,cpu3-cpu-l3-lat@18590100 {
+	cpu3_cpu_l3_lat: qcom,cpu3-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3783,7 +3785,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU3>;
 	};
 
-	cpu4_cpu_l3_lat: qcom,cpu4-cpu-l3-lat@18590100 {
+	cpu4_cpu_l3_lat: qcom,cpu4-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3793,7 +3795,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU4>;
 	};
 
-	cpu5_cpu_l3_lat: qcom,cpu5-cpu-l3-lat@18590100 {
+	cpu5_cpu_l3_lat: qcom,cpu5-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3803,7 +3805,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU5>;
 	};
 
-	cpu6_cpu_l3_lat: qcom,cpu6-cpu-l3-lat@18590100 {
+	cpu6_cpu_l3_lat: qcom,cpu6-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3813,7 +3815,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU6>;
 	};
 
-	cpu7_cpu_l3_lat: qcom,cpu7-cpu-l3-lat@18590100 {
+	cpu7_cpu_l3_lat: qcom,cpu7-cpu-l3-lat {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3823,7 +3825,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_CPU7>;
 	};
 
-	cpu7_cpu_l3_latfloor: qcom,cpu7-cpu-l3-latfloor@18590100 {
+	cpu7_cpu_l3_latfloor: qcom,cpu7-cpu-l3-latfloor {
 		compatible = "qcom,devfreq-icc-l3";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3833,7 +3835,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_SHARED>;
 	};
 
-	snoop_l3_bw: qcom,snoop-l3-bw@18590100 {
+	snoop_l3_bw: qcom,snoop-l3-bw {
 		compatible = "qcom,devfreq-icc-l3bw";
 		reg = <0x18590100 0xa0>;
 		reg-names = "ftbl-base";
@@ -3844,7 +3846,7 @@
 			 &epss_l3_cpu SLAVE_EPSS_L3_SHARED>;
 	};
 
-	snoop_l3_bwmon: qcom,snoop-l3-bwmon@90b9100 {
+	snoop_l3_bwmon: qcom,snoop-l3-bwmon@9091000 {
 		compatible = "qcom,bimc-bwmon4";
 		reg = <0x90b9100 0x300>, <0x90b9000 0x200>;
 		reg-names = "base", "global_base";
@@ -4224,6 +4226,7 @@
 		compatible = "qcom,glink";
 		#address-cells = <1>;
 		#size-cells = <1>;
+		ranges;
 
 		glink_modem: modem {
 			qcom,remote-pid = <1>;
@@ -4446,7 +4449,7 @@
 		};
 	};
 
-	pil_modem: qcom,mss@4080000 {
+	pil_modem: qcom,mss@8a800000 {
 		compatible = "qcom,pil-tz-generic";
 		reg = <0x4080000 0x100>;
 
@@ -4544,7 +4547,7 @@
 		mbox-names = "adsp-pil";
 	};
 
-	qcom,turing@98900000 {
+	qcom,turing@0x98900000 {
 		compatible = "qcom,pil-tz-generic";
 		reg = <0x98900000 0x1400000>;
 
@@ -5177,7 +5180,7 @@
 	};
 
 	/* PIL spss node - for loading Secure Processor */
-	qcom,spss@188101c {
+	qcom,spss@1880000 {
 		compatible = "qcom,pil-tz-generic";
 		reg = <0x188101c 0x4>,
 		      <0x1881024 0x4>,
@@ -5657,7 +5660,7 @@
 		};
 	};
 
-	bluetooth: bt_qca6490@b2e5510 {
+	bluetooth: bt_qca6490 {
 		compatible = "qcom,qca6490";
 		reg = <0xb2e5510 0x690>;
 		reg-names = "tcs_cmd";
@@ -5710,6 +5713,7 @@
 		#address-cells = <1>;
 		#size-cells = <1>;
 		read-only;
+		ranges;
 
 		gpu_speed_bin: gpu_speed_bin@17b {
 				reg = <0x17b 0x1>;

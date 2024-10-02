@@ -853,7 +853,7 @@
 				};
 			};
 
-			port@1b {
+			port@18 {
 				reg = <27>;
 				tpda_dlct5_in_tpdm_dlct: endpoint {
 					remote-endpoint =
@@ -861,7 +861,7 @@
 				};
 			};
 
-			port@1c {
+			port@19 {
 				reg = <28>;
 				tpda_dlct5_in_tpdm_ipcc: endpoint {
 					remote-endpoint =
